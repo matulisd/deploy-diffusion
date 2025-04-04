@@ -9,79 +9,88 @@ COMFYUI_UNET_DIR = "/workspace/ComfyUI/models/unet"
 COMFYUI_CHECKPOINT_DIR = "/workspace/ComfyUI/models/checkpoints"
 
 SD35_MEDIUM_HF = "stabilityai/stable-diffusion-3.5-medium"
+SD15_HF = "sd-legacy/stable-diffusion-v1-5"
 
 SD35_MEDIUM_FILENAME = "sd3.5_medium.safetensors"
+SD15_FILENAME = "v1-5-pruned.safetensors"
 CLIP_G_FILENAME = "clip_g.safetensors"
 CLIP_L_FILENAME = "clip_l.safetensors"
 T5XXL_FP16_FILENAME = "t5xxl_fp16.safetensors"
 
-
-
-LUSIS_476_ID = "15WNb__YiUVIH7DunjnHvPqqNiVpjzOa_"
-LUSIS_272_ID = "121YHKoL8BJtVN54730vkNtm3YnKqfM_d"
+CUSTOM_MODELS = [
+    {
+        "name": "lusis1-476-steps.safetensors",
+        "gdrive_id": "15WNb__YiUVIH7DunjnHvPqqNiVpjzOa_",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "lusis1-272-steps.safetensors",
+        "gdrive_id": "121YHKoL8BJtVN54730vkNtm3YnKqfM_d",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "ryt-511-steps.safetensors",
+        "gdrive_id": "1EGRJb1zOrV6H1pmFm9C7olUUmIBvw_NZ",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "wwwalantinas001.safetensors",
+        "gdrive_id": "1zWfVAv42gV1Mzd2P675WHVjA5M5gJgOv",
+        "sd_ver": "1.5"
+    }
+]
 
 def download_from_gdrive(file_id, dest_path):
-    gdown.download(f"https://drive.google.com/uc?id={file_id}", str(dest_path), quiet=False)
-
-# def download_from_huggingface(repo_id, filename, dest_path, token):
-#     downloaded = hf_hub_download(
-#         repo_id=repo_id, 
-#         filename=filename,
-#         token=token
-#         )
-
-#     if os.path.exists(os.path.join(dest_path, filename)):
-#         print(f"🎯  {os.path.join(dest_path, filename)} already exists -> deleting..")
-#         os.remove(dest_path)
-
-#     # real_file = os.path.realpath(downloaded)
-    
-#     Path(dest_path).parent.mkdir(parents=True, exist_ok=True)
-#     shutil.move(downloaded, dest_path)
-#     # shutil.copy2(real_file, dest_path)
+    if os.path.isfile(dest_path):
+        print(f"✅  File {dest_path} already exists")
+    else:
+        gdown.download(f"https://drive.google.com/uc?id={file_id}", str(dest_path), quiet=False)
+        print(f"✅  Downloaded and saved as {dest_path}")
 
 def download_from_huggingface(repo_id, filename, dest_path, token):
-    downloaded = hf_hub_download(
-        repo_id=repo_id, 
-        filename=filename,
-        token=token
-    )
+    print(f"🎯  Downloading {filename}..")
 
-    # Make sure the parent dir exists
-    Path(dest_path).parent.mkdir(parents=True, exist_ok=True)
+    if os.path.isfile(dest_path):
+        print(f"✅  File {dest_path} already exists")
+    else:
+        downloaded = hf_hub_download(
+            repo_id=repo_id, 
+            filename=filename,
+            token=token,
+            force_download=True,
+            local_dir_use_symlinks=False
+        )
 
-    # Remove existing file or symlink
-    if os.path.isfile(dest_path) or os.path.islink(dest_path):
-        print(f"🎯  {dest_path} already exists -> deleting..")
-        os.remove(dest_path)
+        real_file = os.path.realpath(downloaded)
 
-    # Use the real file, not symlink
-    real_file = os.path.realpath(downloaded)
-    shutil.copy2(real_file, dest_path)
-    print(f"     ✅  Downloaded and saved to {dest_path}")
+        # Make sure the parent dir exists
+        Path(dest_path).parent.mkdir(parents=True, exist_ok=True)
 
+        shutil.copy2(real_file, dest_path)
+        print(f"✅  Downloaded and saved as {dest_path}")
 
 def main():
-    print("\n\n\n🔥  Please enter your Hugging Face access token:")
+    print("\n\n🔥  Please enter your Hugging Face access token:")
     token = input("> ").strip()
 
     print("🎯  Setting up Stable Diffusion..")
-    print("     🎯  Downloading base stable diffusion 3.5 medium model..")
-    download_from_huggingface(SD35_MEDIUM_HF, SD35_MEDIUM_FILENAME, COMFYUI_CHECKPOINT_DIR, token)
+    download_from_huggingface(SD35_MEDIUM_HF, SD35_MEDIUM_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD35_MEDIUM_FILENAME), token)
+    download_from_huggingface(SD15_HF, SD15_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD15_FILENAME), token)
     
     print("🎯  Downloading text encoders:")
-    print(f"     🎯  Downloading {CLIP_G_FILENAME}")
-    download_from_huggingface(SD35_MEDIUM_HF, os.path.join("text_encoders", CLIP_G_FILENAME), COMFYUI_CLIP_DIR, token)
-    print(f"     🎯  Downloading {CLIP_L_FILENAME}")
-    download_from_huggingface(SD35_MEDIUM_HF, os.path.join("text_encoders", CLIP_L_FILENAME), COMFYUI_CLIP_DIR, token)
-    print(f"     🎯  Downloading {T5XXL_FP16_FILENAME}")
-    download_from_huggingface(SD35_MEDIUM_HF, os.path.join("text_encoders", T5XXL_FP16_FILENAME), COMFYUI_CLIP_DIR, token)
+    download_from_huggingface(SD35_MEDIUM_HF, os.path.join("text_encoders", CLIP_G_FILENAME), os.path.join(COMFYUI_CLIP_DIR, CLIP_G_FILENAME), token)
+    download_from_huggingface(SD35_MEDIUM_HF, os.path.join("text_encoders", CLIP_L_FILENAME), os.path.join(COMFYUI_CLIP_DIR, CLIP_L_FILENAME), token)
+    download_from_huggingface(SD35_MEDIUM_HF, os.path.join("text_encoders", T5XXL_FP16_FILENAME), os.path.join(COMFYUI_CLIP_DIR, T5XXL_FP16_FILENAME), token)
 
     print("🎯  Dowloading custom models:")
-    print("     🎯  Downloading lusis1-476steps..")
-    download_from_gdrive(LUSIS_476_ID, os.path.join(COMFYUI_UNET_DIR, "lusis1-476steps.safetensors"))
-    print("     🎯  Downloading lusis1-272steps..")
-    download_from_gdrive(LUSIS_272_ID, os.path.join(COMFYUI_UNET_DIR, "lusis1-272steps.safetensors"))
+    for model in CUSTOM_MODELS:
+        print(f"🎯  Downloading {model['name']}..")
+        if model["sd_ver"] == "3.5":
+            download_from_gdrive(model["gdrive_id"], os.path.join(COMFYUI_UNET_DIR, model["name"]))
+        else:
+            download_from_gdrive(model["gdrive_id"], os.path.join(COMFYUI_CHECKPOINT_DIR, model["name"]))
+
+    print("\n\n✅  Setup done, exiting..\n\n")
 
 if __name__ == "__main__":
     main()
