@@ -19,14 +19,12 @@ cd deploy-diffusion
 ```
 bash start.sh
 ```
-5. When prompted, paste your Hugging Face access token into terminal. 
-
-Reffer to guide on how to extract Hugging Face user access token [here](https://huggingface.co/docs/hub/en/security-tokens)
+5. When prompted, paste your Hugging Face access token into terminal. Reffer to guide on how to extract Hugging Face user access token [here.](https://huggingface.co/docs/hub/en/security-tokens)
 
 6. Access and update ComfyUI, load the workflows.
 
 ### Important links
 
 Quick-start ComfyUI workflows:
-* [sd 3.5 workflow](https://drive.google.com/file/d/1NbvkFbSaQ1MZi-fW-_O7GiKZNsJgoIqm)
-* [sd 1.5 workflow](https://drive.google.com/file/d/1ZalcyicANkm1duGJeRtQ1-y_f4vt8xVi)
+* [SD 3.5 workflow](https://drive.google.com/file/d/1NbvkFbSaQ1MZi-fW-_O7GiKZNsJgoIqm)
+* [SD 1.5 workflow](https://drive.google.com/file/d/1ZalcyicANkm1duGJeRtQ1-y_f4vt8xVi)
