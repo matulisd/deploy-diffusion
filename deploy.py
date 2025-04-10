@@ -18,6 +18,11 @@ CLIP_L_FILENAME = "clip_l.safetensors"
 T5XXL_FP16_FILENAME = "t5xxl_fp16.safetensors"
 
 CUSTOM_MODELS = [
+    # {
+    #     "name": "",
+    #     "gdrive_id": "",
+    #     "sd_ver": ""
+    # },
     {
         "name": "lusis1-476-steps.safetensors",
         "gdrive_id": "15WNb__YiUVIH7DunjnHvPqqNiVpjzOa_",
@@ -29,8 +34,13 @@ CUSTOM_MODELS = [
         "sd_ver": "3.5"
     },
     {
-        "name": "ryt-511-steps.safetensors",
-        "gdrive_id": "1EGRJb1zOrV6H1pmFm9C7olUUmIBvw_NZ",
+        "name": "v4l4ntinas-full-250410",
+        "gdrive_id": "1LkGJgdu2JPcmwPxXv5xGCOub2zOMsd5x",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "v4l4ntinas-230-250410",
+        "gdrive_id": "1CHpdexJ8zP6ofIVxGBaEskbmyPKJn4Mm",
         "sd_ver": "3.5"
     },
     {
@@ -38,6 +48,11 @@ CUSTOM_MODELS = [
         "gdrive_id": "1zWfVAv42gV1Mzd2P675WHVjA5M5gJgOv",
         "sd_ver": "1.5"
     }
+    # {
+    #     "name": "ryt-511-steps.safetensors",
+    #     "gdrive_id": "1EGRJb1zOrV6H1pmFm9C7olUUmIBvw_NZ",
+    #     "sd_ver": "3.5"
+    # },
 ]
 
 def download_from_gdrive(file_id, dest_path):
@@ -87,8 +102,10 @@ def main():
         print(f"🎯  Downloading {model['name']}..")
         if model["sd_ver"] == "3.5":
             download_from_gdrive(model["gdrive_id"], os.path.join(COMFYUI_UNET_DIR, model["name"]))
-        else:
+        elif model["sd_ver"] == "1.5":
             download_from_gdrive(model["gdrive_id"], os.path.join(COMFYUI_CHECKPOINT_DIR, model["name"]))
+        else:
+            print("🔥 UNSUPORTED SD VERSION")
 
     print("\n\n✅  Setup done, exiting..\n\n")
 
