@@ -47,6 +47,11 @@ CUSTOM_MODELS = [
         "name": "wwwalantinas001.safetensors",
         "gdrive_id": "1zWfVAv42gV1Mzd2P675WHVjA5M5gJgOv",
         "sd_ver": "1.5"
+    },
+    {
+        "name": "v4l4n-75.safetensors",
+        "gdrive_id": "1DAbT7zcoaHWXctTmqYywGJsRSU6lHgme",
+        "sd_ver": "3.5"
     }
     # {
     #     "name": "ryt-511-steps.safetensors",
