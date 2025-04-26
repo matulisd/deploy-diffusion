@@ -49,8 +49,8 @@ CUSTOM_MODELS = [
         "sd_ver": "1.5"
     },
     {
-        "name": "v4l4n-75.safetensors",
-        "gdrive_id": "1DAbT7zcoaHWXctTmqYywGJsRSU6lHgme",
+        "name": "v4l4n-etching-125.safetensors",
+        "gdrive_id": "10CmvUJmU3jbDGBKfvABVYPyGDye7QONo",
         "sd_ver": "3.5"
     }
     # {
