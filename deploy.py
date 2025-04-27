@@ -52,6 +52,11 @@ CUSTOM_MODELS = [
         "name": "v4l4n-etching-125.safetensors",
         "gdrive_id": "10CmvUJmU3jbDGBKfvABVYPyGDye7QONo",
         "sd_ver": "3.5"
+    },
+    {
+        "name": "v4l4n-pencil-75-0427.safetensors",
+        "gdrive_id": "194jrOj8nLReHwRicxP6hRpS5w5I4UDUS",
+        "sd_ver": "3.5"
     }
     # {
     #     "name": "ryt-511-steps.safetensors",
