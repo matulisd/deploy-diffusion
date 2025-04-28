@@ -62,6 +62,17 @@ CUSTOM_MODELS = [
         "name": "v4l4n-etching-150-0427.safetensors",
         "gdrive_id": "1e8xd62SgBKCkf7zKSxYkEm69oidw72a7",
         "sd_ver": "3.5"
+    },
+    {
+        "name": "v4l4n-etching-150-0427.safetensors",
+        "gdrive_id": "1e8xd62SgBKCkf7zKSxYkEm69oidw72a7",
+        "sd_ver": "3.5"
+    }
+    ,
+    {
+        "name": "v4l4n-pencil-20-new-captions.safetensors",
+        "gdrive_id": "1TkzSzBraXJooWgAKidPCVDygzZ1tsQE6",
+        "sd_ver": "3.5"
     }
     # {
     #     "name": "ryt-511-steps.safetensors",
