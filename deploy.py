@@ -75,11 +75,6 @@ CUSTOM_MODELS = [
     #     "sd_ver": "3.5"
     # },
     {
-        "name": "v4l4n-pencil-20-new-captions.safetensors",
-        "gdrive_id": "1TkzSzBraXJooWgAKidPCVDygzZ1tsQE6",
-        "sd_ver": "3.5"
-    },
-    {
         "name": "v4l4n-pencil-20ep-standard100",
         "grdive_id": "1YROWcX-4EhdFmFg1cS_HGeNaez5jhTIm",
         "sd_ver": "3.5"
