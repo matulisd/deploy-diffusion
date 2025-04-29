@@ -48,37 +48,37 @@ CUSTOM_MODELS = [
     #     "gdrive_id": "1zWfVAv42gV1Mzd2P675WHVjA5M5gJgOv",
     #     "sd_ver": "1.5"
     # },
-    {
-        "name": "v4l4n-etching-125-0427.safetensors",
-        "gdrive_id": "10CmvUJmU3jbDGBKfvABVYPyGDye7QONo",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "v4l4n-pencil-75-0427.safetensors",
-        "gdrive_id": "194jrOj8nLReHwRicxP6hRpS5w5I4UDUS",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "v4l4n-etching-150-0427.safetensors",
-        "gdrive_id": "1e8xd62SgBKCkf7zKSxYkEm69oidw72a7",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "v4l4n-etching-150-0427.safetensors",
-        "gdrive_id": "1e8xd62SgBKCkf7zKSxYkEm69oidw72a7",
-        "sd_ver": "3.5"
-    }
-    ,
+    # {
+    #     "name": "v4l4n-etching-125-0427.safetensors",
+    #     "gdrive_id": "10CmvUJmU3jbDGBKfvABVYPyGDye7QONo",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "v4l4n-pencil-75-0427.safetensors",
+    #     "gdrive_id": "194jrOj8nLReHwRicxP6hRpS5w5I4UDUS",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "v4l4n-etching-150-0427.safetensors",
+    #     "gdrive_id": "1e8xd62SgBKCkf7zKSxYkEm69oidw72a7",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "v4l4n-etching-150-0427.safetensors",
+    #     "gdrive_id": "1e8xd62SgBKCkf7zKSxYkEm69oidw72a7",
+    #     "sd_ver": "3.5"
+    # }
+    # ,
+    # {
+    #     "name": "v4l4n-pencil-20-new-captions.safetensors",
+    #     "gdrive_id": "1TkzSzBraXJooWgAKidPCVDygzZ1tsQE6",
+    #     "sd_ver": "3.5"
+    # },
     {
         "name": "v4l4n-pencil-20-new-captions.safetensors",
         "gdrive_id": "1TkzSzBraXJooWgAKidPCVDygzZ1tsQE6",
         "sd_ver": "3.5"
     }
-    # {
-    #     "name": "ryt-511-steps.safetensors",
-    #     "gdrive_id": "1EGRJb1zOrV6H1pmFm9C7olUUmIBvw_NZ",
-    #     "sd_ver": "3.5"
-    # },
 ]
 
 def download_from_gdrive(file_id, dest_path):
