@@ -74,9 +74,24 @@ CUSTOM_MODELS = [
     #     "gdrive_id": "1TkzSzBraXJooWgAKidPCVDygzZ1tsQE6",
     #     "sd_ver": "3.5"
     # },
+    # {
+    #     "name": "v4l4n-pencil-20ep-standard100",
+    #     "grdive_id": "1YROWcX-4EhdFmFg1cS_HGeNaez5jhTIm",
+    #     "sd_ver": "3.5"
+    # }
     {
-        "name": "v4l4n-pencil-20ep-standard100",
-        "grdive_id": "1YROWcX-4EhdFmFg1cS_HGeNaez5jhTIm",
+        "name": "w4l4ntinaz-20-0501",
+        "grdive_id": "16j_lU_tZwQHoGUc83wGHPrJZjYCVG0Z-",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-30-0501",
+        "grdive_id": "1Fem5gtWysyTRj5i-uURB_3c_dcLgTXty",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-40-0501",
+        "grdive_id": "1X7GiY3-tdJ3ZDQycu24Qz-hEEMsOwHpl",
         "sd_ver": "3.5"
     }
 ]
@@ -116,7 +131,7 @@ def main():
 
     print("🎯  Setting up Stable Diffusion..")
     download_from_huggingface(SD35_MEDIUM_HF, SD35_MEDIUM_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD35_MEDIUM_FILENAME), token)
-    download_from_huggingface(SD15_HF, SD15_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD15_FILENAME), token)
+    # download_from_huggingface(SD15_HF, SD15_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD15_FILENAME), token)
     
     print("🎯  Downloading text encoders:")
     download_from_huggingface(SD35_MEDIUM_HF, os.path.join("text_encoders", CLIP_G_FILENAME), os.path.join(COMFYUI_CLIP_DIR, CLIP_G_FILENAME), token)
