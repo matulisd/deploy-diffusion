@@ -9,9 +9,11 @@ COMFYUI_UNET_DIR = "/workspace/ComfyUI/models/unet"
 COMFYUI_CHECKPOINT_DIR = "/workspace/ComfyUI/models/checkpoints"
 
 SD35_MEDIUM_HF = "stabilityai/stable-diffusion-3.5-medium"
+SD3_MEDIUM_HF = "stabilityai/stable-diffusion-3-medium"
 SD15_HF = "sd-legacy/stable-diffusion-v1-5"
 
 SD35_MEDIUM_FILENAME = "sd3.5_medium.safetensors"
+SD3_MEDIUM_FILENAME = "sd3_medium.safetensors"
 SD15_FILENAME = "v1-5-pruned.safetensors"
 CLIP_G_FILENAME = "clip_g.safetensors"
 CLIP_L_FILENAME = "clip_l.safetensors"
@@ -76,22 +78,37 @@ CUSTOM_MODELS = [
     # },
     # {
     #     "name": "v4l4n-pencil-20ep-standard100",
-    #     "grdive_id": "1YROWcX-4EhdFmFg1cS_HGeNaez5jhTIm",
+    #     "gdrive_id": "1YROWcX-4EhdFmFg1cS_HGeNaez5jhTIm",
     #     "sd_ver": "3.5"
     # }
-    {
-        "name": "w4l4ntinaz-20-0501",
-        "grdive_id": "16j_lU_tZwQHoGUc83wGHPrJZjYCVG0Z-",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "w4l4ntinaz-30-0501",
-        "grdive_id": "1Fem5gtWysyTRj5i-uURB_3c_dcLgTXty",
-        "sd_ver": "3.5"
-    },
+    # {
+    #     "name": "w4l4ntinaz-20-0501",
+    #     "gdrive_id": "16j_lU_tZwQHoGUc83wGHPrJZjYCVG0Z-",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "w4l4ntinaz-30-0501",
+    #     "gdrive_id": "1Fem5gtWysyTRj5i-uURB_3c_dcLgTXty",
+    #     "sd_ver": "3.5"
+    # },
     {
         "name": "w4l4ntinaz-40-0501",
-        "grdive_id": "1X7GiY3-tdJ3ZDQycu24Qz-hEEMsOwHpl",
+        "gdrive_id": "1X7GiY3-tdJ3ZDQycu24Qz-hEEMsOwHpl",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-80-0501",
+        "gdrive_id": "1aQZFHNP3ZlaMHYf3wRniPvnMj9qtGZqT",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-sd3-simpletuner-5907steps-0501",
+        "gdrive_id": "1S39zBVGYdudubEh2nmL1Prt4BGWFTNfn",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-sd3-simpletuner-6265steps-0501",
+        "gdrive_id": "170avBKcDG1871fh2_BubI2YrDQvjuwYT",
         "sd_ver": "3.5"
     }
 ]
@@ -131,6 +148,7 @@ def main():
 
     print("🎯  Setting up Stable Diffusion..")
     download_from_huggingface(SD35_MEDIUM_HF, SD35_MEDIUM_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD35_MEDIUM_FILENAME), token)
+    download_from_huggingface(SD3_MEDIUM_HF, SD3_MEDIUM_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD3_MEDIUM_FILENAME), token)
     # download_from_huggingface(SD15_HF, SD15_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD15_FILENAME), token)
     
     print("🎯  Downloading text encoders:")
