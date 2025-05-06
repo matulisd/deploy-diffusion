@@ -133,7 +133,7 @@ def main():
 
     print("🎯  Setting up Stable Diffusion..")
     download_from_huggingface(SD35_MEDIUM_HF, SD35_MEDIUM_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD35_MEDIUM_FILENAME), token)
-    download_from_huggingface(SD3_MEDIUM_HF, SD3_MEDIUM_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD3_MEDIUM_FILENAME), token)
+    # download_from_huggingface(SD3_MEDIUM_HF, SD3_MEDIUM_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD3_MEDIUM_FILENAME), token)
     # download_from_huggingface(SD15_HF, SD15_FILENAME, os.path.join(COMFYUI_CHECKPOINT_DIR, SD15_FILENAME), token)
     
     print("🎯  Downloading text encoders:")

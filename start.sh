@@ -51,6 +51,9 @@ echo "🎯  Updating ComfyUI..."
 cd /workspace/ComfyUI
 git stash
 git pull origin master
+source /workspace/ComfyUI/venv/bin/activate
+pip install -r requirements.txt
+python main.py &
 
 echo "🎯  Running deployment script..."
 cd /workspace/deploy-diffusion
