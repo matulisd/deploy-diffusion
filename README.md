@@ -26,5 +26,6 @@ bash start.sh
 ### Important links
 
 Quick-start ComfyUI workflows:
+* [SD 3.5 workflow (latest)](https://drive.google.com/file/d/1z-1L4gQh9p3XnrWYzIb_k1Or8uvt_flW)
 * [SD 3.5 workflow](https://drive.google.com/file/d/1NbvkFbSaQ1MZi-fW-_O7GiKZNsJgoIqm)
 * [SD 1.5 workflow](https://drive.google.com/file/d/1ZalcyicANkm1duGJeRtQ1-y_f4vt8xVi)
