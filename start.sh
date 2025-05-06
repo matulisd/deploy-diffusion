@@ -47,5 +47,11 @@ else
     pip install -r requirements.txt
 fi
 
+echo "🎯  Updating ComfyUI..."
+cd /workspace/ComfyUI
+git stash
+git pull origin master
+
 echo "🎯  Running deployment script..."
+cd /workspace
 python deploy.py

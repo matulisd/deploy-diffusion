@@ -92,23 +92,8 @@ CUSTOM_MODELS = [
     #     "sd_ver": "3.5"
     # },
     {
-        "name": "w4l4ntinaz-40-0501",
-        "gdrive_id": "1X7GiY3-tdJ3ZDQycu24Qz-hEEMsOwHpl",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "w4l4ntinaz-80-0501",
-        "gdrive_id": "1aQZFHNP3ZlaMHYf3wRniPvnMj9qtGZqT",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "w4l4ntinaz-sd3-simpletuner-5907steps-0501",
-        "gdrive_id": "1S39zBVGYdudubEh2nmL1Prt4BGWFTNfn",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "w4l4ntinaz-sd3-simpletuner-6265steps-0501",
-        "gdrive_id": "170avBKcDG1871fh2_BubI2YrDQvjuwYT",
+        "name": "w4l4ntinaz-sd35-8000-0505",
+        "gdrive_id": "1LrUowNIp1pmIsX7NkKYsFp8xUPUHO5O-",
         "sd_ver": "3.5"
     }
 ]
