@@ -53,5 +53,5 @@ git stash
 git pull origin master
 
 echo "🎯  Running deployment script..."
-cd /workspace
+cd /workspace/deploy-diffusion
 python deploy.py
