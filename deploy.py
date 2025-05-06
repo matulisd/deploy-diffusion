@@ -92,7 +92,7 @@ CUSTOM_MODELS = [
     #     "sd_ver": "3.5"
     # },
     {
-        "name": "w4l4ntinaz-sd35-8000-0505",
+        "name": "w4l4ntinaz-sd35-8000-0505.safetensors",
         "gdrive_id": "1LrUowNIp1pmIsX7NkKYsFp8xUPUHO5O-",
         "sd_ver": "3.5"
     }
