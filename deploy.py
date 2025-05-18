@@ -92,8 +92,48 @@ CUSTOM_MODELS = [
     #     "sd_ver": "3.5"
     # },
     {
-        "name": "w4l4ntinaz-sd35-8000-0505.safetensors",
+        "name": "w4l4ntinaz-8000-0505(best-so-far).safetensors",
         "gdrive_id": "1LrUowNIp1pmIsX7NkKYsFp8xUPUHO5O-",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-7200-0517.safetensors",
+        "gdrive_id": "1MKLmBPh9YrH9jNOh0dGjXyCpo56sMW_Y",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-9600-0517.safetensors",
+        "gdrive_id": "1IRVH326gxU4wxvTp244xCKxgDCh1ENx7",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-12600-0517.safetensors",
+        "gdrive_id": "1fy7-STSxPDDkZ-sWB9e6WEtiT9n01L3R",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "w4l4ntinaz-16200-0517.safetensors",
+        "gdrive_id": "1mqVNusjqr1onyKWPTdJ7uveDAzjuyOtt",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "peizazai-2700-0518.safetensors",
+        "gdrive_id": "1dABXGnkzU-parHmz7aYgEG0u6MFK5ZGe",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "peizazai-3900-0518.safetensors",
+        "gdrive_id": "1KRwj9NN-sJVAfpge8dotPwUyauM69H9g",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "skull-5600-0518.safetensors",
+        "gdrive_id": "1QmV-xjR_-A1GIiOPsnM8imMzukeLj5MA",
+        "sd_ver": "3.5"
+    },
+    {
+        "name": "skull-7000-0518.safetensors",
+        "gdrive_id": "1H1ZeCEeBMFByKsK8H_F0374u2irdDGYS",
         "sd_ver": "3.5"
     }
 ]
