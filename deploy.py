@@ -136,39 +136,59 @@ CUSTOM_MODELS = [
     #     "gdrive_id": "1H1ZeCEeBMFByKsK8H_F0374u2irdDGYS",
     #     "sd_ver": "3.5"
     # }
+    # {
+    #     "name": "etch-0620-5000steps.safetensors",
+    #     "gdrive_id": "1Ly0v6UVzKg6DmlRVG_t_tWsGvhSby7BU",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "etch-0620-7000steps.safetensors",
+    #     "gdrive_id": "1sQsDXYguEn_5kwg901GX18WSn9hEKyl6",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "etch-0620-9000steps.safetensors",
+    #     "gdrive_id": "1hCXzAFMKN9sSRGJgy53p--efnV9QhdFY",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "etch-0620-11000steps.safetensors",
+    #     "gdrive_id": "1bgCRaaVyaysTtpT3F7oL77XTg1JOo8d8",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "crosshatch-0626-3500steps.safetensors",
+    #     "gdrive_id": "1thHDxwAE7C_Zf0PG1Zpej3Z2g8XB-1Ur",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "crosshatch-0626-5500steps.safetensors",
+    #     "gdrive_id": "1Yd05pCM3Jy5Le0wO4LKxhH04y67MzbCh",
+    #     "sd_ver": "3.5"
+    # },
+    # {
+    #     "name": "crosshatch-0626-7500steps.safetensors",
+    #     "gdrive_id": "1hW-xShdlKiKUxDUIdLH1RpxxH9Zbkq6y",
+    #     "sd_ver": "3.5"
+    # },
     {
-        "name": "etch-0620-5000steps.safetensors",
-        "gdrive_id": "1Ly0v6UVzKg6DmlRVG_t_tWsGvhSby7BU",
+        "name": "v4l4n-sketch-0706-2500.safetensors",
+        "gdrive_id": "1hEnMVtraQYepvPI5cTVPWKAdjPPam4wF",
         "sd_ver": "3.5"
     },
     {
-        "name": "etch-0620-7000steps.safetensors",
-        "gdrive_id": "1sQsDXYguEn_5kwg901GX18WSn9hEKyl6",
+        "name": "v4l4n-sketch-0706-3500.safetensors",
+        "gdrive_id": "1lu9BwH-oSB5AC6jOUdQHedqWW1_z8JrZ",
         "sd_ver": "3.5"
     },
     {
-        "name": "etch-0620-9000steps.safetensors",
-        "gdrive_id": "1hCXzAFMKN9sSRGJgy53p--efnV9QhdFY",
+        "name": "v4l4n-sketch-0706-4500.safetensors",
+        "gdrive_id": "17IBmDul5PhTFghCghhuLr6AFnYyuBG4u",
         "sd_ver": "3.5"
     },
     {
-        "name": "etch-0620-11000steps.safetensors",
-        "gdrive_id": "1bgCRaaVyaysTtpT3F7oL77XTg1JOo8d8",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "crosshatch-0626-3500steps.safetensors",
-        "gdrive_id": "1thHDxwAE7C_Zf0PG1Zpej3Z2g8XB-1Ur",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "crosshatch-0626-5500steps.safetensors",
-        "gdrive_id": "1Yd05pCM3Jy5Le0wO4LKxhH04y67MzbCh",
-        "sd_ver": "3.5"
-    },
-    {
-        "name": "crosshatch-0626-7500steps.safetensors",
-        "gdrive_id": "1hW-xShdlKiKUxDUIdLH1RpxxH9Zbkq6y",
+        "name": "v4l4n-sketch-0706-5500.safetensors",
+        "gdrive_id": "13IgZiM4WJ3I1cxojn0Kgzz_bhR87VG0H",
         "sd_ver": "3.5"
     }
 ]
